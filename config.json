@@ -1,0 +1,11 @@
+{
+   "token": "token",
+   "discord-server": "My Server",
+   "mongo-user": "admin",
+   "mongo-password": "testing",
+   "mongo-servers": [
+      "localhost:27017"
+   ],
+   "mongo-db": "discord",
+   "mongo-options": ""
+}
