@@ -10,6 +10,10 @@ config = None
 async def on_ready():
    print('Logged in as')
    print(client.user.name)
+   for server in client.servers:
+      for s_member in server.members:
+         print(s_member.name, s_member.id)
+
    print('------')
 
 @client.event
@@ -69,7 +73,7 @@ async def handle_karma(message, channel):
                      count = ((count + 1) / 2) - 1
 
             if not error:
-               member = m[:m.find(op)]
+               member = m[:m.find(op)].lower()
                if "@" in member:
                   regex = re.compile("<@(.*)>")
                   match = regex.search(member)
